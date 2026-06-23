@@ -274,6 +274,37 @@
             margin-bottom: 40px;
         }
 
+        @media (max-width: 768px) {
+            #app-layout {
+                grid-template-columns: 1fr; /* Sidebar akan pindah ke atas/bawah */
+            }
+
+            sidebar {
+                height: auto; /* Tinggi sidebar jadi otomatis menyesuaikan konten */
+                position: relative;
+                padding: 20px;
+            }
+
+            main {
+                padding: 20px;
+                min-width: 100%; /* Agar tidak memaksa scroll ke samping */
+            }
+
+            .grid-stats {
+                grid-template-columns: 1fr; /* Statistik tampil memanjang ke bawah */
+            }
+
+            .cards-layout {
+                grid-template-columns: 1fr; /* Kartu produk jadi satu kolom saja */
+            }
+
+            .view-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+        }
+
         /* STATS CARD */
         .grid-stats {
             display: grid;
